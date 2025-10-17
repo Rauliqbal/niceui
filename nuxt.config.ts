@@ -4,11 +4,25 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxt/content'],
+  app: {
+    head: {
+      script: [
+        {
+          src: "https://unpkg.com/akar-icons-fonts",
+        },
+      ],
+    }
+  },
+  modules: ['@nuxt/content', '@nuxt/image',"@nuxtjs/color-mode",],
   css: ['~/assets/css/main.css'],
   vite: {
     plugins: [
       tailwindcss(),
     ],
+  },
+  colorMode: {
+    classSuffix: "",
+    preference: "light",
+    fallback: "light",
   },
 })
