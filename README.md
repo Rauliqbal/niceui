@@ -1,89 +1,75 @@
-![banner](./banner.png)
+# Nuxt Minimal Starter
 
-![License](https://img.shields.io/badge/License-MIT-green.svg)
-![Status](https://img.shields.io/badge/Status-Active-blue)
-![Tailwind](https://img.shields.io/badge/Built_with-Tailwind_CSS_4-38BDF8?logo=tailwindcss)
+Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-# ⚡ Nice UI — Lightweight Tailwind components that just work.
+## Setup
 
-**Nice UI** is a lightweight Tailwind CSS component library built for **copy & paste productivity**.  
-No complex setup. No vendor lock-in. Just **minimalist components that work in any frontend stack**.
-
-> **Slogan:** _Nice UI — A simple Tailwind library: easy to use, fast to copy, works everywhere._
-
----
-
-## ✨ Features
-
-- 🚀 **Copy & Paste Ready** — Just grab a snippet and drop it into your project.
-- 🎨 **Elegant & Minimalist Design** — Clean, modern aesthetics without fluff.
-- ⚡ **Cross Framework** — Works with any stack: React, Vue, Next.js, Svelte, plain HTML, etc.
-- 🌗 **Dark Mode Friendly** (optional on supported components)
-- 📦 **Tailwind v4 Compatible** — Built fully with the new class syntax.
-
----
-
-## 🧱 Ready-to-Use Components
-
-### Buttons
-
-- Primary
-- Outline
-- Icon Button
-
-### Cards
-
-- Simple Card
-- Product Card (Coming Soon)
-
-### Forms
-
-- Input Field
-- Toggle Switch
-
-### Navigation
-
-- Navbar (Coming Soon)
-- Breadcrumb (Coming Soon)
-
-### Feedback
-
-- Alert
-- Badge (Coming Soon)
-- Modal (Coming Soon)
-
----
-
-## 🤝 Contributing
+Make sure to install dependencies:
 
 ```bash
-# Clone repository
-git clone https://github.com/yourusername/nice-ui.git
-
-# Install dependencies
+# npm
 npm install
 
-# Start development
-npm run dev
+# pnpm
+pnpm install
 
+# yarn
+yarn install
+
+# bun
+bun install
 ```
 
-Contribution Guidelines :
+## Development Server
 
-- Keep components framework-agnostic (HTML + Tailwind only)
-- Follow existing naming & spacing conventions
-- Include preview + code snippet for each component
+Start the development server on `http://localhost:3000`:
 
----
+```bash
+# npm
+npm run dev
 
-## ❤️ Sponsors
+# pnpm
+pnpm dev
 
-If you love the project and want to support maintenance & new components, consider sponsoring!
+# yarn
+yarn dev
 
-Not yet accepting sponsors, but if you're interested, open an issue or DM!
+# bun
+bun run dev
+```
 
----
+## Production
 
-## 📄 License
+Build the application for production:
 
-Nice UI is licensed under the MIT License — free for personal & commercial use.
+```bash
+# npm
+npm run build
+
+# pnpm
+pnpm build
+
+# yarn
+yarn build
+
+# bun
+bun run build
+```
+
+Locally preview production build:
+
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
