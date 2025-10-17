@@ -17,6 +17,17 @@ const colorMode = useColorMode();
 const toggleTheme = () => {
   colorMode.preference = colorMode.preference === "dark" ? "light" : "dark";
 };
+
+const navlinks = [
+   {
+      label: "Components",
+      url: '/component'
+   },
+   {
+      label: "Blog",
+      url: '/blog'
+   },
+]
 </script>
 
 <template>
@@ -74,28 +85,13 @@ const toggleTheme = () => {
               <ul
                 class="bg-white dark:bg-slate-800 dark:md:bg-transparent md:bg-transparent flex items-center px-7 pt-28 md:pb-0 pb-[38rem] space-y-8 md:px-0 md:space-y-0 flex-col md:flex-row md:space-x-10 md:pt-0"
               >
-                <li>
-                  <NuxtLink
+                
+                <li v-for="link in navlinks">
+                  <NuxtLink 
                     @click="showHide"
                     class="dark:text-slate-400 capitalize tracking-wide hover:text-blue-500 transition ease-out duration-200 text-gray-800"
-                    to="/"
-                    >Home</NuxtLink
-                  >
-                </li>
-                <li>
-                  <NuxtLink
-                    @click="showHide"
-                    class="dark:text-slate-400 capitalize tracking-wide hover:text-blue-500 transition ease-out duration-200 text-gray-800"
-                    to="/challenges"
-                    >Challenges</NuxtLink
-                  >
-                </li>
-                <li>
-                  <NuxtLink
-                    @click="showHide"
-                    class="dark:text-slate-400 capitalize tracking-wide hover:text-blue-500 transition ease-out duration-200 text-gray-800"
-                    to="/articles"
-                    >Articles</NuxtLink
+                    :to="link.url"
+                    >{{ link.label }}</NuxtLink
                   >
                 </li>
                 <li class="text-slate-600 dark:text-white hidden md:block">
