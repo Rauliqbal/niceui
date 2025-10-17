@@ -2,12 +2,20 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+    --color-background: #eff1f5;
+  --color-foreground: oklch(0.145 0 0);
+  --color-primary: #546fff;
+  --font-poppins: "Poppins", "sans-serif";
+}
+
 @layer base {
+   
   html {
       @apply scroll-smooth;
    }
    body {
-      @apply  bg-[#FAFCFF] dark:bg-slate-900;
+      @apply  bg-[#f1f1f1] dark:bg-slate-900;
    }
    section {
       @apply py-12 md:py-24;
@@ -16,7 +24,10 @@
 
 @layer components {
   .container {
-    @apply px-4 lg:px-0 max-w-6xl mx-auto
+    @apply mx-auto sm:max-w-xl md:!max-w-4xl lg:!max-w-[1120px] px-4 lg:px-0;
+  }
+  .btn{
+    @apply inline-flex items-center justify-center rounded-lg px-4 py-2  transition-all ease-out focus:outline-none  disabled:opacity-50 disabled:pointer-events-none active:scale-95
   }
 }
 

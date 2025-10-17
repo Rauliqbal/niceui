@@ -1,0 +1,47 @@
+<script setup lang="ts">
+const props = defineProps<{
+  to?: string;
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
+  variant?: "primary" | "secondary" | "outline" | "ghost";
+}>();
+
+const baseClass =
+  "btn";
+
+const variantClass = computed(() => {
+  switch (props.variant) {
+    case "secondary":
+      return "bg-gray-500 text-white hover:bg-gray-600 focus:ring-gray-400";
+    case "outline":
+      return "border border-gray-300 text-gray-700 hover:bg-gray-200 focus:ring-gray-300";
+    case "ghost":
+      return "bg-transparent text-gray-700 hover:bg-gray-100 focus:ring-gray-200";
+    default: 
+      return "bg-primary text-white hover:bg-indigo-500 focus:ring-primary";
+  }
+});
+</script>
+
+<template>
+  <!-- Mode NuxtLink -->
+  <NuxtLink v-if="to" :to="to" :class="[baseClass, variantClass]">
+    <span class="inline-flex items-center gap-2">
+      <slot name="icon" />
+      <slot />
+    </span>
+  </NuxtLink>
+
+  <!-- Mode Button -->
+  <button
+    v-else
+    :type="type || 'button'"
+    :disabled="disabled"
+    :class="[baseClass, variantClass]"
+  >
+    <span class="inline-flex items-center gap-2">
+      <slot name="icon" />
+      <slot />
+    </span>
+  </button>
+</template>

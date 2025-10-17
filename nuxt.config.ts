@@ -6,6 +6,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
     head: {
+      title: "NiceUI - A simple Tailwind Component",
       script: [
         {
           src: "https://unpkg.com/akar-icons-fonts",
