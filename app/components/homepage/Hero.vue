@@ -8,6 +8,10 @@
                <span class="inline-block shadow-lg bg-white dark:bg-slate-800 rounded-lg px-4 -rotate-1"> <p class="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-violet-500">Tailwind</p> </span> Components
             </h1>
             <p class="mt-8 mb-4 md:text-xl text-gray-600">Nice UI gives you clean, production-ready building blocks, perfect for admin panels, internal tools, and client projects. No setup. Just paste and ship.</p>
+
+            <ui-button to="/docs" variant="primary" class="mt-4">
+               Get started
+            </ui-button>
             
             
          </div>

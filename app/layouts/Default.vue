@@ -4,6 +4,9 @@
 
 <template>
   <div>
-    <HomepageHero/>
+    <AppNavbar/>
+    <main>
+      <slot/>
+    </main>
   </div>
 </template>
