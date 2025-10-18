@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: "NiceUI - A simple Tailwind Component",
+      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
       script: [
         {
           src: "https://unpkg.com/akar-icons-fonts",

@@ -17,12 +17,10 @@ const { data: navigation } = await useAsyncData("navigation", () => {
     <AppNavbar />
 
     <main class="min-h-screen">
-      <div class="w-full max-w-[90rem] sm:px-6 lg:px-8">
+      <div class="w-full max-w-[90rem] mx-auto sm:px-6 lg:px-8">
         <div class="flex flex-col lg:grid lg:grid-cols-10 lg:gap-10">
           <!-- ASIDE -->
-          <aside
-            class="lg:col-span-2 w-72 border-r border-neutral-200 dark:border-neutral-800 p-6 overflow-y-auto hidden md:block"
-          >
+          <aside class="lg:col-span-2 w-72 p-6 overflow-y-auto hidden md:block">
             <nav class="space-y-8">
               <div v-for="section in navigation" :key="section.path">
                 <h2
