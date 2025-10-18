@@ -1,12 +1,10 @@
-<script lang="ts" setup>
-
-</script>
+<script lang="ts" setup></script>
 
 <template>
   <div>
-    <AppNavbar/>
+    <AppNavbar />
     <main>
-      <slot/>
+      <slot />
     </main>
   </div>
 </template>

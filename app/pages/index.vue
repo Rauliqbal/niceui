@@ -1,9 +1,5 @@
-<script lang="ts" setup>
-
-</script>
-
 <template>
   <div>
-    <HomepageHero/>
+    <HomepageHero />
   </div>
 </template>
