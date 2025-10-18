@@ -14,8 +14,8 @@ definePageMeta({
 </script>
 
 <template>
-  <NuxtLayout>
+  <div>
     <ContentRenderer v-if="data" :value="data" />
     <div v-else>Home not found</div>
-  </NuxtLayout>
+  </div>
 </template>
