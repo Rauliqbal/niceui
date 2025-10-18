@@ -24,7 +24,7 @@
           paste and ship.
         </p>
 
-        <ui-button to="/component" variant="primary" class="mt-4">
+        <ui-button to="/getting-started" variant="primary" class="mt-4">
           Get started
         </ui-button>
       </div>

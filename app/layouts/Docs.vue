@@ -20,7 +20,9 @@ const { data: navigation } = await useAsyncData("navigation", () => {
       <div class="w-full max-w-[90rem] mx-auto sm:px-6 lg:px-8">
         <div class="flex flex-col lg:grid lg:grid-cols-10 lg:gap-10">
           <!-- ASIDE -->
-          <aside class="lg:col-span-2 w-72 p-6 overflow-y-auto hidden md:block">
+          <aside
+            class="sticky top-18 self-start lg:col-span-2 w-72 p-6 overflow-y-auto hidden md:block"
+          >
             <nav class="space-y-8">
               <div v-for="section in navigation" :key="section.path">
                 <h2
@@ -33,15 +35,13 @@ const { data: navigation } = await useAsyncData("navigation", () => {
                   />
                   {{ section.title }}
                 </h2>
-                <ul
-                  class="border-l border-neutral-200 dark:border-neutral-800 pl-3 space-y-1"
-                >
+                <ul class="pl-3">
                   <li v-for="link in section.children" :key="link.path">
                     <NuxtLink
                       :to="link.path"
-                      class="block py-1.5 px-2 rounded-lg text-sm text-neutral-700 dark:text-neutral-300 hover:text-emerald-500 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                      class="block py-1.5 pr-2 pl-3 border-l border-slate-200 dark:border-slate-700 text-sm text-slate-700 dark:text-slate-400 hover:text-primary hover:bg-slate-100 dark:hover:bg-slate-800"
                       :class="{
-                        'text-emerald-500 font-medium bg-neutral-50 dark:bg-neutral-800':
+                        '!text-primary font-medium border-l border-l-primary dark:border-l-primary ':
                           route.path === link.path,
                       }"
                     >
@@ -55,15 +55,7 @@ const { data: navigation } = await useAsyncData("navigation", () => {
 
           <!-- BODY -->
           <div class="lg:col-span-8">
-            <div class="flex flex-col lg:grid lg:grid-cols-10 lg:gap-10">
-              <!-- BODY:CONTENT -->
-              <div class="lg:col-span-8">
-                <slot />
-              </div>
-
-              <!-- BODY:TABLE OF CONTENT -->
-              <div>TOC</div>
-            </div>
+            <slot />
           </div>
         </div>
       </div>

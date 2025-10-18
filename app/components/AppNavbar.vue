@@ -3,16 +3,6 @@ function showHide() {
   document.getElementById("hamburger").checked = false;
 }
 
-onMounted(() => {
-  window.addEventListener("scroll", function () {
-    let header = this.document.querySelector("header");
-
-    header.classList.add("fixed", window.scrollY > 0);
-    header.classList.toggle("bg-sticky", window.scrollY > 0);
-    header.classList.remove("absolute", window.scrollY > 0);
-  });
-});
-
 const colorMode = useColorMode();
 const toggleTheme = () => {
   colorMode.preference = colorMode.preference === "dark" ? "light" : "dark";
@@ -20,8 +10,8 @@ const toggleTheme = () => {
 
 const navlinks = [
   {
-    label: "Components",
-    url: "/component",
+    label: "Docs",
+    url: "/getting-started",
   },
   {
     label: "Blog",
@@ -74,14 +64,14 @@ const navlinks = [
               class="transition-transform duration-100"
               @click="toggleTheme"
             >
-              <i class="text-xl ai-sun text-slate-500 dark:text-slate-400"></i>
+              <i class="text-xl ai-sun text-slate-700 dark:text-slate-400"></i>
             </button>
             <button
               v-show="colorMode.preference === 'dark'"
               class="transition-transform duration-100"
               @click="toggleTheme"
             >
-              <i class="text-xl ai-moon text-slate-500 dark:text-slate-400"></i>
+              <i class="text-xl ai-moon text-slate-700 dark:text-slate-400"></i>
             </button>
           </div>
         </div>
@@ -169,43 +159,3 @@ const navlinks = [
     </div>
   </header>
 </template>
-
-<style>
-#hamburger ~ label span::after,
-#hamburger ~ label span::before {
-  right: 0;
-  transition-delay: 0.2s, 0s;
-  transition-duration: 0.1s;
-  transition-property: margin, transform;
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 4px;
-}
-
-#hamburger ~ label span::after {
-  margin-top: 10px;
-}
-
-#hamburger ~ label span::before {
-  margin-top: -10px;
-}
-
-#hamburger:checked ~ label span {
-  background-color: transparent;
-}
-
-#hamburger:checked ~ label span:before,
-#hamburger:checked ~ label span:after {
-  transition-delay: 0s, 0.2s;
-  margin-top: 0;
-}
-
-#hamburger:checked ~ label span:before {
-  transform: rotate(45deg);
-}
-
-#hamburger:checked ~ label span:after {
-  transform: rotate(-45deg);
-}
-</style>
