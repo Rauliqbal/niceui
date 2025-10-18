@@ -1,13 +1,9 @@
-<script lang="ts" setup>
-
-</script>
-
 <template>
-  <div>
-    component
-  </div>
+  <NuxtLayout name="docs">
+    <ContentDoc path="/components" :path="'/components/' + route.params.slug" />
+  </NuxtLayout>
 </template>
 
-<style lang="css" scoped>
-  
-</style>
+<script setup lang="ts">
+const route = useRoute();
+</script>
