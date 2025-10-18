@@ -2,7 +2,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2025-07-15',
+  compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   app: {
     head: {
@@ -12,18 +12,29 @@ export default defineNuxtConfig({
           src: "https://unpkg.com/akar-icons-fonts",
         },
       ],
-    }
+    },
   },
-  modules: ['@nuxt/content', '@nuxt/image',"@nuxtjs/color-mode",],
-  css: ['~/assets/css/main.css'],
+  modules: [
+    "@nuxt/content",
+    "@nuxt/image",
+    "@nuxtjs/color-mode",
+    "@nuxtjs/google-fonts",
+  ],
+  css: ["~/assets/css/main.css"],
   vite: {
-    plugins: [
-      tailwindcss(),
-    ],
+    plugins: [tailwindcss()],
   },
   colorMode: {
     classSuffix: "",
     preference: "light",
     fallback: "light",
   },
-})
+  googleFonts: {
+    families: {
+      Alatsi: true,
+      Inter: {
+        wght: ["400", "500", "600"],
+      },
+    },
+  },
+});

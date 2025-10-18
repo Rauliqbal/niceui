@@ -6,7 +6,8 @@
   --color-background: #eff1f5;
   --color-foreground: oklch(0.145 0 0);
   --color-primary: #546fff;
-  --font-poppins: "Poppins", "sans-serif";
+  --font-inter: "Inter", "sans-serif";
+  --font-alatsi: "Alatsi", "sans-serif";
 }
 
 @layer base {

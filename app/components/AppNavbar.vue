@@ -19,20 +19,22 @@ const toggleTheme = () => {
 };
 
 const navlinks = [
-   {
-      label: "Components",
-      url: '/component'
-   },
-   {
-      label: "Blog",
-      url: '/blog'
-   },
-]
+  {
+    label: "Components",
+    url: "/component",
+  },
+  {
+    label: "Blog",
+    url: "/blog",
+  },
+];
 </script>
 
 <template>
-  <header class="fixed inset-x-0 z-20 py-4 transition-all">
-    <div class="container">
+  <header
+    class="sticky top-0 z-20 py-4 border-b border-gray-300 transition-all"
+  >
+    <div class="w-full container">
       <div class="flex items-center justify-between">
         <div class="relative">
           <NuxtLink to="/">
@@ -85,9 +87,8 @@ const navlinks = [
               <ul
                 class="bg-white dark:bg-slate-800 dark:md:bg-transparent md:bg-transparent flex items-center px-7 pt-28 md:pb-0 pb-[38rem] space-y-8 md:px-0 md:space-y-0 flex-col md:flex-row md:space-x-10 md:pt-0"
               >
-                
                 <li v-for="link in navlinks">
-                  <NuxtLink 
+                  <NuxtLink
                     @click="showHide"
                     class="dark:text-slate-400 capitalize tracking-wide hover:text-blue-500 transition ease-out duration-200 text-gray-800"
                     :to="link.url"
